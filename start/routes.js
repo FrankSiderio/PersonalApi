@@ -16,3 +16,6 @@
 const Route = use('Route')
 
 Route.on('/').render('welcome')
+
+Route.get('/people', 'BasicInformationController.index');
+Route.get('/person/:pid', 'BasicInformationController.show');
