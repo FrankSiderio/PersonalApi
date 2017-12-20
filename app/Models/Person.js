@@ -20,6 +20,10 @@ class Person extends Model {
         return this.hasMany('App/Models/Interest', 'personId');
     }
 
+    locations() {
+        return this.hasMany('App/Models/Location', 'personId');
+    }
+
 }
 
 module.exports = Person

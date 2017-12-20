@@ -19,6 +19,7 @@ class PersonController {
     async show({params}) {
         return Person.query()
                      .with('interests')
+                     .with('locations')
                      .where('personId', params.personId)
                      .fetch()
     }
