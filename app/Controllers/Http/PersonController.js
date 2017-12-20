@@ -21,6 +21,7 @@ class PersonController {
                      .with('interests')
                      .with('locations')
                      .with('skills')
+                     .with('workExperience')
                      .where('personId', params.personId)
                      .fetch()
     }

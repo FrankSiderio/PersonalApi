@@ -28,6 +28,10 @@ class Person extends Model {
         return this.hasMany('App/Models/Skill', 'personId');
     }
 
+    workExperience() {
+        return this.hasMany('App/Models/WorkExperience', 'personId');
+    }
+
 }
 
 module.exports = Person
