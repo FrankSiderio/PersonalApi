@@ -2,14 +2,14 @@
 
 const Model = use('Model')
 
-class Person extends Model {
+class Major extends Model {
     static get table() {
-        return "people";
+        return "majors";
     }
 
     static get primaryKey() {
-        return "personId";
+        return "majorId";
     }
 }
 
-module.exports = Person
+module.exports = Major

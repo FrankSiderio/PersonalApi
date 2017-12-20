@@ -5,7 +5,7 @@ const Schema = use('Schema')
 class WorkExperienceSchema extends Schema {
   up () {
     this.create('work_experiences', (table) => {
-      table.increments('wid')
+      table.increments('workId')
       table.string('position')
       table.string('description')
       table.string('company')
