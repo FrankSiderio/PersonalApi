@@ -17,5 +17,9 @@ const Route = use('Route')
 
 Route.on('/').render('welcome')
 
-Route.get('/people', 'BasicInformationController.index');
-Route.get('/person/:pid', 'BasicInformationController.show');
+Route.get('/people', 'PersonController.index');
+Route.get('/person/:personId', 'PersonController.show');
+Route.get('/education/:personId', 'EducationController.show')
+Route.get('/interests/:personId', 'InterestController.show')
+Route.get('/skills/:personId', 'SkillController.show')
+Route.get('/work/:personId', 'WorkExperienceController.show')
