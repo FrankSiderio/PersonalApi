@@ -2,7 +2,7 @@
 
 const Person = use('App/Models/Person')
 
-class BasicInformationController {
+class PersonController {
     /**
      * Returns all the people
      * @return {Promise}
@@ -13,7 +13,7 @@ class BasicInformationController {
 
     /**
      * Returns a specific person
-     * @param  {integer}  params 
+     * @param  {integer}  params
      * @return
      */
     async show({params}) {
@@ -22,4 +22,4 @@ class BasicInformationController {
 
 }
 
-module.exports = BasicInformationController
+module.exports = PersonController

@@ -4,16 +4,16 @@ const Schema = use('Schema')
 
 class EducationMajorSchema extends Schema {
   up () {
-    this.create('education_majors', (table) => {
-        table.integer('educationId')
-        table.foreign('educationId').references('educationId').on('educations')
-        table.integer('majorId')
-        table.foreign('majorId').references('majorId').on('majors')
+    this.create('education_major', (table) => {
+        table.integer('education_id')
+        table.foreign('education_id').references('educationId').on('educations')
+        table.integer('major_id')
+        table.foreign('major_id').references('majorId').on('majors')
     })
   }
 
   down () {
-    this.drop('education_majors')
+    this.drop('education_major')
   }
 }
 
