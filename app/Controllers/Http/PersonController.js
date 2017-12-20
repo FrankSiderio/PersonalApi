@@ -20,6 +20,7 @@ class PersonController {
         return Person.query()
                      .with('interests')
                      .with('locations')
+                     .with('skills')
                      .where('personId', params.personId)
                      .fetch()
     }

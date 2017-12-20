@@ -20,4 +20,5 @@ Route.on('/').render('welcome')
 Route.get('/people', 'PersonController.index');
 Route.get('/person/:personId', 'PersonController.show');
 Route.get('/education/:personId', 'EducationController.show')
-Route.get('/interest/:personId', 'InterestController.show')
+Route.get('/interests/:personId', 'InterestController.show')
+Route.get('/skills/:personId', 'SkillController.show')

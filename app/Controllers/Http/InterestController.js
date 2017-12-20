@@ -10,8 +10,8 @@ class InterestController {
      */
     async show({params}) {
         return Interest.query()
-                        .where('person_id', params.personId)
-                        .fetch()
+                       .where('person_id', params.personId)
+                       .fetch()
     }
 }
 
