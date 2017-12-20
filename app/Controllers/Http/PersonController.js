@@ -17,7 +17,10 @@ class PersonController {
      * @return
      */
     async show({params}) {
-        return await Person.find(params.pid);
+        return Person.query()
+                     .with('interests')
+                     .where('personId', params.personId)
+                     .fetch()
     }
 
 }
