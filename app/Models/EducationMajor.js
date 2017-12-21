@@ -8,6 +8,10 @@ class EducationMajor extends Model {
         return "education_major";
     }
 
+    static get hidden() {
+        return ['education_id', 'major_id'];
+    }
+
     education() {
         return this.belongsTo('App/Models/Education', 'educationId');
     }

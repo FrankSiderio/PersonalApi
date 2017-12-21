@@ -12,6 +12,10 @@ class Major extends Model {
         return "majorId";
     }
 
+    static get hidden() {
+        return ['majorId', 'created_at', 'updated_at'];
+    }
+
     educations() {
         return this.hasMany('App/Models/EducationMajor', 'majorId');
     }

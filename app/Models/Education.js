@@ -12,6 +12,10 @@ class Education extends Model {
         return "educationId";
     }
 
+    static get hidden() {
+        return['educationId', 'person_id', 'created_at', 'updated_at'];
+    }
+
     person() {
         return this.belongsTo('App/Models/Person', 'personId');
     }
