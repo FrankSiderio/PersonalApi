@@ -12,6 +12,10 @@ class Person extends Model {
         return "personId";
     }
 
+    static get hidden() {
+        return ['created_at', 'updated_at'];
+    }
+
     educations() {
         return this.hasMany('App/Models/Education', 'personId');
     }
