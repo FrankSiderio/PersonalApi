@@ -23,3 +23,5 @@ Route.get('/education/:personId', 'EducationController.show')
 Route.get('/interests/:personId', 'InterestController.show')
 Route.get('/skills/:personId', 'SkillController.show')
 Route.get('/work/:personId', 'WorkExperienceController.show')
+
+Route.post('/feedback', 'FeedbackController.store')
