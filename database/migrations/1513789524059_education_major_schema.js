@@ -9,6 +9,7 @@ class EducationMajorSchema extends Schema {
         table.foreign('education_id').references('educationId').on('educations')
         table.integer('major_id')
         table.foreign('major_id').references('majorId').on('majors')
+        table.boolean('isMinor')
     })
   }
 
