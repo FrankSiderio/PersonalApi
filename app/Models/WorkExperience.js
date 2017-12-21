@@ -12,6 +12,10 @@ class WorkExperience extends Model {
         return "workId";
     }
 
+    static get hidden() {
+        return ['workId', 'person_id', 'created_at', 'updated_at'];
+    }
+
     person() {
         return this.belongsTo('App/Models/Person', 'person_id');
     }

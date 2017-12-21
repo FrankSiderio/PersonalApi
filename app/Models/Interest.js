@@ -12,6 +12,10 @@ class Interest extends Model {
         return "interestId";
     }
 
+    static get hidden() {
+        return ['interestId', 'created_at', 'updated_at', 'person_id'];
+    }
+
     person() {
         return this.belongsTo('App/Models/Person', 'person_id');
     }
