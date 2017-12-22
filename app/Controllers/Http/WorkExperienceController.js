@@ -6,12 +6,15 @@ class WorkExperienceController {
     /**
      * Returns the work experience for a given person
      * @param  {integer}  params
-     * @return
+     * @return {promise}
      */
     async show({params}) {
-        return WorkExperience.query()
-                             .where('person_id', params.personId)
-                             .fetch()
+        const workExperience = await WorkExperience.query()
+                                 .where('person_id', params.personId)
+                                 .fetch();
+        return {
+            workExperience: workExperience
+        }
     }
 }
 
