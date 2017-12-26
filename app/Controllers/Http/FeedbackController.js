@@ -32,7 +32,7 @@ class FeedbackController {
 
             await feedback.save();
 
-            response.status(200).send(feedback);
+            response.status(201).send(feedback.name);
         }
     }
 }
