@@ -9,6 +9,7 @@ class PeopleSchema extends Schema {
       table.string('firstName')
       table.string('lastName')
       table.string('email')
+      table.string('bio')
       table.timestamps()
     })
   }

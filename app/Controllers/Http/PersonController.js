@@ -17,13 +17,16 @@ class PersonController {
      * @return
      */
     async show({params}) {
-        return Person.query()
+        const person =  await Person.query()
                      .with('interests')
                      .with('locations')
                      .with('skills')
                      .with('workExperience')
                      .where('personId', params.personId)
                      .fetch()
+        return {
+            person: person
+        }
     }
 
 }
