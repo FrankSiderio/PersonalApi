@@ -21,5 +21,6 @@ Route.get('/api/education/:personId', 'EducationController.show')
 Route.get('/api/interests/:personId', 'InterestController.show')
 Route.get('/api/skills/:personId', 'SkillController.show')
 Route.get('/api/work/:personId', 'WorkExperienceController.show')
+Route.get('/api/projects/:personId', 'ProjectController.show')
 
 Route.post('/feedback', 'FeedbackController.store')
