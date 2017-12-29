@@ -23,4 +23,4 @@ Route.get('/api/skills/:personId', 'SkillController.show')
 Route.get('/api/work/:personId', 'WorkExperienceController.show')
 Route.get('/api/projects/:personId', 'ProjectController.show')
 
-Route.post('/feedback', 'FeedbackController.store')
+Route.post('/api/feedback', 'FeedbackController.store')

@@ -8,6 +8,7 @@ class InterestsSchema extends Schema {
       table.increments('interestId')
       table.string('title')
       table.string('description')
+      table.string('imagePath')
       table.integer('person_id')
       table.foreign('person_id').references('personId').on('people')
       table.timestamps()

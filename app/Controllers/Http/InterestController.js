@@ -9,9 +9,12 @@ class InterestController {
      * @return
      */
     async show({params}) {
-        return Interest.query()
-                       .where('person_id', params.personId)
-                       .fetch()
+        const interests = await Interest.query()
+                                        .where('person_id', params.personId)
+                                        .fetch();
+        return {
+            interests: interests
+        }
     }
 }
 

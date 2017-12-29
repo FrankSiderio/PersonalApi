@@ -21,7 +21,9 @@ class FeedbackController {
         const validation = await validateAll(request.all(), rules)
         // If the validation fails return a bad request with the errors
         if(validation.fails()) {
-            response.status(400).send(validation.messages());
+            response.status(400).send({
+                error: validation.messages()
+            });
         }
         else { // Otherwise insert the feedback
             const feedback = new Feedback();
