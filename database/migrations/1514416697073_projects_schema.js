@@ -7,6 +7,7 @@ class ProjectsSchema extends Schema {
     this.create('projects', (table) => {
       table.increments('projectId')
       table.string('name')
+      table.string('preview')
       table.string('description')
       table.string('imagePath')
       table.integer('person_id')
