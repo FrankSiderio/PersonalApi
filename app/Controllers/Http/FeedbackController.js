@@ -2,6 +2,7 @@
 
 const Feedback = use('App/Models/Feedback')
 const { validateAll } = use('Validator')
+const Mail = use('Mail')
 
 class FeedbackController {
     /**
@@ -33,6 +34,20 @@ class FeedbackController {
             feedback.message = request.input('message');
 
             await feedback.save();
+
+            await Mail.raw('... everyone who got this message.', (message) => {
+              message.subject('Hello ...')
+              message.from('foo@bar.com')
+              message.to('baz@bar.com')
+            })
+            
+            /*
+            await Mail.send('emails.feedback', feedback.message, (message) => {
+                message
+                    .to('franksideriojr@gmail.com')
+                    .from('noreply')
+                    .subject('Someone Sent Feedback!')
+            });*/
 
             response.status(201).send(feedback.name);
         }
