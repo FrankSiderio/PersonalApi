@@ -7,6 +7,7 @@ class WorkExperienceSchema extends Schema {
     this.create('work_experiences', (table) => {
       table.increments('workId')
       table.string('position')
+      table.string('preview')
       table.string('description')
       table.string('company')
       table.boolean('current')
