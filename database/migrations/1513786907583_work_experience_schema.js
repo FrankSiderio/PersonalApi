@@ -16,6 +16,8 @@ class WorkExperienceSchema extends Schema {
       table.integer('person_id')
       table.foreign('person_id').references('personId').on('people')
       table.string('imagePath')
+      table.string('previewImagePath')
+      table.string('url')
       table.timestamps()
     })
   }
