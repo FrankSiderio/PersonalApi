@@ -20,7 +20,7 @@ class WorkExperienceSeeder {
       const workExperience1 = new WorkExperience();
 
       workExperience1.position = 'Developer';
-      workExperience1.preview = 'On the mobile app team I worked on creating and improving the mobile ordering experience.';
+      workExperience1.preview = 'On the mobile app team I worked on improving the mobile ordering experience.';
       workExperience1.description = 'I was involved on the mobile android team. I worked with many developers on features and bug fixes. I even was apart of creating a test app for geofence testing. I gained experience with AWS, Android Studio, APIs, Java, and Retrofit.'
       workExperience1.company = 'Wawa Inc';
       workExperience1.current = false;
@@ -48,7 +48,7 @@ class WorkExperienceSeeder {
       const workExperience3 = new WorkExperience();
 
       workExperience3.position = 'Instructor';
-      workExperience3.preview = 'I taught many different classes including minecraft moding and learning how to program with JavaScript.';
+      workExperience3.preview = 'At iD Tech I taught classes including Minecraft moding and learning how to program with JavaScript.';
       workExperience3.description = 'At iD Tech I was able to teach kids about technology. I taught classes on how to program with JavaScript. Creating different skins and models in minecraft. And my favorite I taught a Minecraft modding class.';
       workExperience3.company = 'iD Tech';
       workExperience3.current = false;

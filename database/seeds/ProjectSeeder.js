@@ -41,7 +41,7 @@ class ProjectSeeder {
       const project3 = new Project();
 
       project3.name = 'MLB Scoreboard';
-      project3.preview = 'A Python project that uses API to display MLB scores with an Arduino kit.';
+      project3.preview = 'A Python project that uses an API to display MLB scores with an Arduino kit.';
       project3.previewImagePath = '../images/python.png';
       project3.imagePath = '../images/experience/arduino.png';
       project3.url = 'https://github.com/FrankSiderio/mlb-scoreboard';

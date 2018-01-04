@@ -26,10 +26,12 @@ class PersonSeeder {
 
       await person.save();
 
-      // Doin some interests
-      var titles = ['Eagles', 'Flyers', 'Phillies', 'Sixers', 'Baseball', 'Creating Sandcastles'];
-      var descriptions = ['Fly Eagles Fly', 'Hockey', 'Since I played baseball for most of my life I have always been a huge Phillies fan.', 'Yes I do trust the process and I always will.', 'I played baseball most of my life and it used to be something I was committed to more than anything.', 'Since I like to go to the beach I picked up a hobby of creating sand castles. I have even participated in competitions'];
-      var imagePaths = ['../images/interests/eagles.jpg', '../images/interests/flyers.jpg', '../images/interests/phillies.jpg', '../images/interests/sixers.png', '../images/interests/baseball.jpg', '../images/interests/castle.jpg'];
+      // Doin some interests...Make sure these are in the right oreder
+      var titles = ['GitHub', 'APIs', 'Laravel', 'Eagles', 'Flyers', 'Phillies', 'Sixers', 'Baseball', 'Creating Sandcastles', 'Movies'];
+      var descriptions = ['One of my favorite tools to use. It makes version control easy and fun. I cannot imagine development without it.', 'They are essential to most software applications. In my experience creating them with PHP and NodeJs has been a great learning experience and a lot of fun.', 'This is my favorite framework to use. It makes PHP elegant and easy. The documentation plus the tutorials available are the most extensive compared to other frameworks.', 'Having played football I also enjoyed watching the Eagles growing up. I hope that this year is our year. Fly Eagles Fly.', 'I was not much of a hockey fan until I got my first NHL video game (NHL 10). That started my love for the game and for the Flyers.', 'Since I played baseball and always went to the games when I was younger. I have always been a huge Phillies fan.', 'Yes I do trust the process and I always will. My dad was a big part of me becoming a Sixers fan. He watches every game.',
+      'I played baseball most of my life and it used to be something I was committed to more than anything. I am still a fan for the game and for the Phillies.', 'Since I go to the beach a lot in the summer I picked up a hobby of creating sand castles. I have even participated in competitions.',
+      'I always enjoyed watching movies as a kid. Now I am a huge fan of science fiction movies.'];
+      var imagePaths = ['../images/interests/github.png', '../images/interests/apis.png', '../images/interests/laravel.jpg', '../images/interests/eagles.jpg', '../images/interests/flyers.jpg', '../images/interests/phillies.jpg', '../images/interests/sixers.png', '../images/interests/baseball.jpg', '../images/interests/castle.jpg', '../images/interests/scifi.png'];
 
       for(var i = 0; i < titles.length; i++) {
           const interest = new Interest();
