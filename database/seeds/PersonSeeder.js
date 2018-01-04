@@ -26,52 +26,23 @@ class PersonSeeder {
 
       await person.save();
 
-      // Doin some interests
-      const interest1 = new Interest();
+      // Doin some interests...Make sure these are in the right oreder
+      var titles = ['GitHub', 'APIs', 'Laravel', 'Eagles', 'Flyers', 'Phillies', 'Sixers', 'Baseball', 'Creating Sandcastles', 'Movies'];
+      var descriptions = ['This is one of my favorite tools to use. It makes version control easy and fun. I cannot imagine development without it.', 'They are essential to most software applications. In my experience creating them with PHP and NodeJs has been a great learning experience and a lot of fun.', 'This is my favorite framework to use. It makes PHP elegant and easy. The documentation plus the tutorials available are the most extensive compared to other frameworks.', 'Having played football I also enjoyed watching the Eagles growing up. I hope that this year is our year. Fly Eagles Fly.', 'I was not much of a hockey fan until I got my first NHL video game (NHL 10). This started my love for the game and for the Flyers.', 'Since I played baseball and always went to the games when I was younger, I have always been a huge Phillies fan.', 'Yes I do trust the process and I always will. My dad was a big part of me becoming a Sixers fan. He watches every game.',
+      'I played baseball most of my life and it used to be something I was committed to more than anything. I am still a fan of the game and the Phillies.', 'Since I go to the beach a lot in the summer I picked up a hobby of creating sandcastles. I have even participated in competitions.',
+      'I always enjoyed watching movies as a kid. Now I am a huge fan of science fiction movies.'];
+      var imagePaths = ['../images/interests/github.png', '../images/interests/apis.png', '../images/interests/laravel.jpg', '../images/interests/eagles.jpg', '../images/interests/flyers.jpg', '../images/interests/phillies.jpg', '../images/interests/sixers.png', '../images/interests/baseball.jpg', '../images/interests/castle.jpg', '../images/interests/scifi.png'];
 
-      interest1.title = 'Eagles';
-      interest1.description = 'Fly Eagles Fly';
-      interest1.imagePath = '../images/interests/eagles.jpg';
-      interest1.person_id = 1;
+      for(var i = 0; i < titles.length; i++) {
+          const interest = new Interest();
 
-      await interest1.save();
+          interest.title = titles[i];
+          interest.description = descriptions[i];
+          interest.imagePath = imagePaths[i];
+          interest.person_id = 1;
 
-      const interest2 = new Interest();
-
-      interest2.title = 'Phillies';
-      interest2.description = 'Baseball';
-      interest2.imagePath = '../images/interests/phillies.jpg';
-      interest2.person_id = 1;
-
-      await interest2.save();
-
-      const interest3 = new Interest();
-
-      interest3.title = 'Sixers';
-      interest3.description = 'Trust the process';
-      interest3.imagePath = '../images/interests/sixers.png';
-      interest3.person_id = 1;
-
-      await interest3.save();
-
-      const interest4 = new Interest();
-
-      interest4.title = 'Flyers';
-      interest4.description = 'Hockey';
-      interest4.imagePath = '../images/interests/flyers.jpg';
-      interest4.person_id = 1;
-
-      await interest4.save();
-
-      const interest5 = new Interest();
-
-      interest5.title = 'Creating Sandcastles';
-      interest5.description = 'fjdkslfjkslfs';
-      interest5.imagePath = '../images/interests/castle.jpg';
-      interest5.person_id = 1;
-
-      await interest5.save();
-
+          await interest.save();
+      }
   }
 }
 
