@@ -2,6 +2,7 @@
 
 const Feedback = use('App/Models/Feedback')
 const { validateAll } = use('Validator')
+const Mail = use('Mail')
 
 class FeedbackController {
     /**
@@ -33,6 +34,12 @@ class FeedbackController {
             feedback.message = request.input('message');
 
             await feedback.save();
+
+            await Mail.raw(feedback.message, (message) => {
+              message.subject('Feedback')
+              message.from('Me@me.com')
+              message.to('franksideriojr@gmail.com')
+            });
 
             response.status(201).send(feedback.name);
         }
