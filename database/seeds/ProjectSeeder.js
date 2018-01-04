@@ -19,7 +19,7 @@ class ProjectSeeder {
       const project1 = new Project();
 
       project1.name = 'Capping';
-      project1.preview = 'Powered by Laravel this application makes a life coaches job much easier.';
+      project1.preview = 'Powered by Laravel this application makes a life coach\'s job much easier.';
       project1.previewImagePath = '../images/laravel.png';
       project1.imagePath = '../images/experience/capping.png';
       project1.url = 'https://letscoach.reev.us/';

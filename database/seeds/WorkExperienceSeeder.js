@@ -48,7 +48,7 @@ class WorkExperienceSeeder {
       const workExperience3 = new WorkExperience();
 
       workExperience3.position = 'Instructor';
-      workExperience3.preview = 'At iD Tech I taught classes including Minecraft moding and learning how to program with JavaScript.';
+      workExperience3.preview = 'I taught classes including Minecraft modding and programing with JavaScript.';
       workExperience3.description = 'At iD Tech I was able to teach kids about technology. I taught classes on how to program with JavaScript. Creating different skins and models in minecraft. And my favorite I taught a Minecraft modding class.';
       workExperience3.company = 'iD Tech';
       workExperience3.current = false;
