@@ -35,12 +35,6 @@ class FeedbackController {
 
             await feedback.save();
 
-            await Mail.raw(feedback.message, (message) => {
-              message.subject('Feedback')
-              message.from('Me@me.com')
-              message.to('franksideriojr@gmail.com')
-            });
-
             response.status(201).send(feedback.name);
         }
     }
