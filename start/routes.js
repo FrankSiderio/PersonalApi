@@ -15,12 +15,12 @@
 
 const Route = use('Route')
 
-Route.get('/api/people', 'PersonController.index');
-Route.get('/api/person/:personId', 'PersonController.show');
-Route.get('/api/education/:personId', 'EducationController.show')
-Route.get('/api/interests/:personId', 'InterestController.show')
-Route.get('/api/skills/:personId', 'SkillController.show')
-Route.get('/api/work/:personId', 'WorkExperienceController.show')
-Route.get('/api/projects/:personId', 'ProjectController.show')
+Route.get('/people', 'PersonController.index');
+Route.get('/person/:personId', 'PersonController.show');
+Route.get('/education/:personId', 'EducationController.show')
+Route.get('/interests/:personId', 'InterestController.show')
+Route.get('/skills/:personId', 'SkillController.show')
+Route.get('/work/:personId', 'WorkExperienceController.show')
+Route.get('/projects/:personId', 'ProjectController.show')
 
-Route.post('/api/feedback', 'FeedbackController.store')
+Route.post('/feedback', 'FeedbackController.store')
