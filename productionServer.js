@@ -24,8 +24,8 @@ const fs = require('fs')
 
 // Certificate
 const options = {
-  key: fs.readFileSync('/etc/letsencrypt/live/franksiderio.me/privkey.pem')),
-  cert: fs.readFileSync('/etc/letsencrypt/live/franksiderio.me/fullchain.pem'))
+  key: fs.readFileSync('/etc/letsencrypt/live/franksiderio.me/privkey.pem'),
+  cert: fs.readFileSync('/etc/letsencrypt/live/franksiderio.me/fullchain.pem')
 }
 
 new Ignitor(require('@adonisjs/fold'))
